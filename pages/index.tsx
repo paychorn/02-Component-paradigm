@@ -1,11 +1,11 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
-import { Card } from "antd";
 import { CatPost } from "./types/Cats";
 import { NextPage } from "next";
 import { useState } from "react";
-const { Meta } = Card;
+import CatCard from "./CatCard";
+import { Row, Col } from "antd";
 
 interface HomeProps {
   posts: CatPost[];
@@ -21,17 +21,14 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        {selectedPosts.map(({ author, title, url }) => (
-          <Card
-            hoverable
-            style={{ width: 240 }}
-            cover={<img alt="example" src={url} />}
-          >
-            <Meta title={title} description={author} />
-          </Card>
-        ))}
+        <Row justify="center">
+          {selectedPosts.map(({ author, title, url }, index) => (
+            <Col key={index}>
+              <CatCard key={index} author={author} title={title} url={url} />
+            </Col>
+          ))}
+        </Row>
       </main>
-
       <footer className={styles.footer}>
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
