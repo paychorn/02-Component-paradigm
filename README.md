@@ -35,7 +35,7 @@ On the homepage `localhost:3000`, there are cards containing cute cats along wit
 
 2. (Optional) Add a new page which should be accessed on `/stat`.
 
-3. (Optional) Add a button on the homepage. The button should redirect to the stat page.
+3. (Optional) Add a button (or hyperlink)  on the homepage. The button should redirect to the stat page.
 
 4. (Optional) On the stat page, add a table which shows all of the author. The author name must be distinct.
 
