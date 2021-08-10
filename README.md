@@ -38,7 +38,8 @@ On the homepage `localhost:3000`, there are cards containing cute cats along wit
 3. (Optional) Add a button on the homepage. The button should redirect to the stat page.
 
 4. (Optional) On the stat page, add a table which shows all of the author. The author name must be distinct.
-The following links may be useful: https://ant.design/components/table
+
+    The following link may be useful: https://ant.design/components/table
 
 5. (Optional) Table in (4) should show the authors sorted by uploaded count in descending order.
 
